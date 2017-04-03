@@ -1,0 +1,16 @@
+q :- write('A = '),
+     read(A),
+     (   A = 0, write('Not a quadratic equation');
+         write('B = '),
+         read(B),
+         write('C = '),
+         read(C),
+         D is B*B-4*A*C,
+         (   D = 0, write('x = '), X is -B/2/A, write(X);
+             D > 0, write('x1 = '), X1 is (-B+sqrt(D))/2/A, write(X1), nl, write('x2 = '), X2 is (-B-sqrt(D))/2/A, write(X2);
+             R is -B/2/A, I is abs(sqrt(-D)/2/A), 
+             write('first root is = ('), write(R), write(', '), write(I), write(')'), nl,
+             write('second root is = ('), write(R), write(', -'), write(I), write(')')
+         )
+     ).
+q.
