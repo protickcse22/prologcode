@@ -1,0 +1,10 @@
+bitwiseAND(A,B,X):-
+               X is A /\ B.
+			   
+			   
+bitwiseOR(A,B,X):- 
+               X is A \/ B.
+             			   
+						   
+bitwiseXOR(A,B,X):- 
+               X is A xor B.						   
